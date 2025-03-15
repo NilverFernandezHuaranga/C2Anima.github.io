@@ -192,7 +192,19 @@
         <div class="position-absolute w-100 bottom-0" style="height: 50%; background-color: #005843;"></div>
 
         <!-- Centered Container with Image -->
-        
+        <div class="container d-flex justify-content-center align-items-center py-5 position-relative"
+     data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1200">
+    <div class="rounded-3 overflow-hidden shadow-lg" style="max-width: 800px; width: 90%;">
+        <div class="video-container">
+            <video id="myVideo" class="video" onclick="togglePlay()">
+                <source src="assets/video/video1.mp4" type="video/mp4">
+            </video>
+            <div id="playButton" class="play-button" onclick="playVideo()">
+                <i class="fa fa-play"></i>
+            </div>
+        </div>
+    </div>
+</div>
     </div>
 
     <div class="container-fluid" style="background-color: #005843; color: white;">
