@@ -8,7 +8,7 @@ Este proyecto es un prototipo web dinámico desarrollado como portafolio y plata
 
 📎 Acceso al proyecto en línea:
 
-https://strong-druid-ca8ee9.netlify.app/
+ https://nilverfernandezhuaranga.github.io/C2Anima.github.io/
 
 🛠️ Tecnologías utilizadas:
 HTML5: Uso de etiquetas semánticas para una estructura clara y accesible.
