@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+.hero {
+    position: relative;
+    padding: 100px 20px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #005f40; /* Fondo degradado en verde */
+    overflow: hidden;
+}
+
+
+.hero .container {
+    max-width: 800px;
+    font-family: "Nunito", sans-serif;
+    margin: 0 auto;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #005f40;
+    color: white;
+    border: 2px solid white;
+    font-family: "Nunito", sans-serif;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+    
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    opacity: 0;
+    font-family: "Nunito", sans-serif;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.8s ease-out 0.7s forwards;
+
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0;
+    font-family: "Nunito", sans-serif;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.8s ease-out 0.9s forwards;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.8s ease-out 1.1s forwards;
+}
+
+.hero-btn-primary,
+.hero-btn-secondary {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-btn-primary {
+    background-color: #e9e62e;
+    color: #2575fc;
+    border: none;
+}
+
+
+.hero-btn-primary:hover {
+    background-color: #e9e62e ;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.hero-btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.hero-btn-secondary:hover {
+   
+    background: linear-gradient(135deg, #005843, #005f40);
+    transform: translateY(-5px);
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*txt center*/
+
+/*conctactos */
+
+/* Estilos base para la sección hero-contact */
+.hero-contact {
+    background-color: #005f40; /* Fondo verde oscuro */
+    padding: 20px 0; /* Espaciado interno */
+    color: white; /* Color del texto */
+    font-family: 'Nunito', sans-serif; /* Fuente moderna */
+}
+
+.hero-contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-contact p {
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    font-weight: 600; /* Texto en negrita */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el ícono y el texto */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    border-radius: 30px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.hero-contact p:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo más claro al hacer hover */
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+/* Estilos específicos para el ícono de teléfono */
+.hero-contact p[data-value="phone"]::before {
+    content: "📱"; 
+    font-size: 1.5rem; 
+    animation: bounce 2s infinite;
+}
+
+/* Estilos específicos para el ícono de scroll */
+.hero-contact p[data-value="scroll_down"]::before {
+    content: "⬇️"; /* Ícono de scroll */
+    font-size: 1.5rem; /* Tamaño del ícono */
+    animation: bounce 2s infinite; /* Animación de rebote */
+}
+
+/* Animación de rebote para el ícono de scroll */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/*header*/
+header {
+    z-index: 889;
+    position: fixed;
+    background-color: hsla(0, 89%, 48%, 0.1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 200px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+header.sticky {
+    background-color: #ffffff; 
+    padding: 10px 200px;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+}
+
+header .navigation a {
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 0; 
+}
+
+header .navigation a:hover {
+    color: #0a5510; 
+}
+
+header.sticky .navigation a:hover {
+    color: black;
+}
+
+section {
+    padding: 100px 200px;
+}
+
+/*iconos*/
+
+.icon-container1 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px; 
+}
+
+.img-card1 {
+    width: 100%; 
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
+}
+
+.img-card1:hover {
+    transform: scale(1.1); 
+    background-color: #fafbfc; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.img-card1 img {
+    max-width: 50%; 
+    max-height: 50%; 
+    object-fit: contain; 
+    transition: transform 0.3s ease; 
+}
+
+.img-card1:hover img {
+    transform: rotate(10deg) scale(2.2); 
+}
+
+/*iconos 5 fila*/
+
+.img-card2 {
+    width: 100%; 
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    position: relative; /* Permite ajustes de posición */
+    left: 50%; /* Ajusta este valor para moverlo más o menos al centro */
+}
+
+.img-card2:hover {
+    transform: scale(1.1); 
+    background-color: #fafbfc; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.img-card2 img {
+    max-width: 50%; 
+    max-height: 50%; 
+    object-fit: contain; 
+    transition: transform 0.3s ease; 
+}
+
+.img-card2:hover img {
+    transform: rotate(10deg) scale(2.2); 
+}
+
+
+/*carrusel*/
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre botones */
+    margin-top: 20px;
+}
+
+.carousel-control-custom {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #005f40; /* Color verde de tu proyecto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-custom span {
+    filter: invert(1); /* Hace que el ícono sea blanco */
+}
+
+.carousel-control-custom.prev {
+    background-color: white;
+    border: 2px solid #ddd;
+}
+
+.carousel-control-custom.prev span {
+    filter: invert(50%);
+}
+
+.carousel-control-custom:hover {
+    opacity: 0.8;
+}
+
+/* Video */
+.video-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+}
+
+.play-button i {
+    font-size: 40px;
+}
+
+.play-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Precios y planes */
+.pricing-column {
+    max-width: 320px; /* Limita el ancho máximo */
+    width: 100%;
+}
+
+/*pie de pagina*/
+
+.footer {
+    background-color: #091030;
+    padding: 50px 0;
+}
+
+.footer-top h1 {
+    margin-bottom: 0;
+}
+
+.footer-btn {
+    background-color: #FFE51D;
+    color: #091030;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-btn:hover {
+    background-color: #ffd700;
+}
+
+.footer-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
